@@ -1,0 +1,24 @@
+{
+  "name": "lms-erp",
+  "version": "1.0.0",
+  "description": "Arohak Learning Management System",
+  "scripts": {
+    "install:all": "npm run install:frontend && npm run install:backend",
+    "install:frontend": "cd lms-erp/frontend && npm install",
+    "install:backend": "cd lms-erp/backend && npm install",
+    "build:frontend": "cd lms-erp/frontend && npm run build",
+    "build:backend": "cd lms-erp/backend && npm run build",
+    "start:frontend": "cd lms-erp/frontend && npm start",
+    "start:backend": "cd lms-erp/backend && npm start",
+    "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "deploy:railway": "railway deploy",
+    "deploy:render": "render deploy",
+    "deploy:vercel": "vercel --prod"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "keywords": ["lms", "education", "nodejs", "nextjs", "mysql"],
+  "author": "Arohak Technologies",
+  "license": "MIT"
+}
